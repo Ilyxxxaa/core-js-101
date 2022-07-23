@@ -253,10 +253,9 @@ function getRectangleString(width, height) {
 function encodeToRot13(str) {
   return str.replace(
     /[A-Z]/gi,
-    (c) =>
-      'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'[
-        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.indexOf(c)
-      ]
+    (char) => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'[
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.indexOf(char)
+    ],
   );
 }
 
